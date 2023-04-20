@@ -1,0 +1,4 @@
+1) model based training plot is incorrectly titled; it uses the same environment as model free, but the MBPO agent introduces a model
+2) although model based has lower reward, its performance is the same; the lower reward is because the time-dependent bonus reward is not included in its reward function (I mistook this difference for model bias at first, but doesn't actually mean anything)
+3) MBPO agent in model based uses 10% "real" and 90% rollout data for learning; the episodes counted on the x-axis are only the real ones
+4) real episodes are used to train the MBPO agent (system identification); the architecture of the neural network used here is the same as of the neural network we use to train the dynamics with motor babbling
